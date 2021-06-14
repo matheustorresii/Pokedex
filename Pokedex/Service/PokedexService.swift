@@ -9,8 +9,8 @@ import Foundation
 import Alamofire
 
 protocol PokedexNetworkable {
-    func fetchPokedex(offset: String, completion: @escaping (Swift.Result<[Pokemon], APIService.RequestError>) -> Void)
-    func fetchPokemon(id: String, completion: @escaping (Swift.Result<Pokemon, APIService.RequestError>) -> Void)
+    func fetchPokedex(offset: String, completion: @escaping (Result<[Pokemon], APIService.RequestError>) -> Void)
+    func fetchPokemon(id: String, completion: @escaping (Result<Pokemon, APIService.RequestError>) -> Void)
 }
 
 class PokedexService: PokedexNetworkable {

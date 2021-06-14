@@ -21,7 +21,7 @@ class APIService {
         case unknown
     }
     
-    static func request<T: Decodable>(_ endpoint: APIEndpoint, completion: @escaping (Swift.Result<T, RequestError>) -> Void) {
+    static func request<T: Decodable>(_ endpoint: APIEndpoint, completion: @escaping (Result<T, RequestError>) -> Void) {
         AF.request(endpoint.url).response { req in
             if let error = req.error {
                 print(error)
