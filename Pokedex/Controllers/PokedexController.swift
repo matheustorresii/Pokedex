@@ -86,17 +86,19 @@ class PokedexController: UIViewController {
             self?.navigationController?.pushViewController(PokemonController(pokemon: model), animated: false)
         }).disposed(by: disposeBag)
     }
-    
-    // MARK: - UI
-    
-    private func configureUI() {
+}
+
+// MARK: - UISetup
+extension PokedexController: UISetup {
+    func configureUI() {
         self.title = "Pokédex"
         view.backgroundColor = .white
-        navigationController?.navigationBar.prefersLargeTitles = true
+        let navigationAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.pokedexRed]
+        navigationController?.navigationBar.titleTextAttributes = navigationAttributes
         configureViews()
     }
     
-    private func configureViews() {
+    func configureViews() {
         configureSearchBox()
         configureCollectionView()
         configureActivityIndicator()

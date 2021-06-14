@@ -50,14 +50,8 @@ class PokedexCell: UICollectionViewCell {
     // MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureViews()
+        configureUI()
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    // MARK: - UI
     
     public func setupCell(for pokemon: Pokemon) {
         pokemonNameLabel.text = pokemon.name.capitalized
@@ -67,6 +61,26 @@ class PokedexCell: UICollectionViewCell {
         pokemonImage.kf.setImage(with:URL(string: imageUrl)!,
                                  placeholder: UIImage(named: "pokeIcon")!)
         configureTypeStackFor(types: pokemon.types)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+// MARK: - UISetup
+extension PokedexCell: UISetup {
+    func configureUI() {
+        configureViews()
+    }
+    
+    
+    func configureViews() {
+        configureCellBackground()
+        configurePokemonImage()
+        configurePokemonID()
+        configurePokemonName()
+        configureTypeStack()
     }
     
     private func configureTypeStackFor(types: [Type]) {
@@ -86,14 +100,6 @@ class PokedexCell: UICollectionViewCell {
     
     private func clearTypeStack() {
         typeStack.arrangedSubviews.forEach { $0.removeFromSuperview() }
-    }
-    
-    private func configureViews() {
-        configureCellBackground()
-        configurePokemonImage()
-        configurePokemonID()
-        configurePokemonName()
-        configureTypeStack()
     }
     
     private func configureCellBackground() {

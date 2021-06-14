@@ -56,15 +56,16 @@ class SearchBoxView: UIView {
         let value = textField.text ?? ""
         delegate?.didSearch?(value: value)
     }
-    
-    // MARK: - UI
-    
-    private func configureUI() {
+}
+
+// MARK: - UISetup
+extension SearchBoxView: UISetup {
+    func configureUI() {
         self.backgroundColor = .clear
         configureViews()
     }
     
-    private func configureViews() {
+    func configureViews() {
         configureTextField()
         configureSearchButton()
     }

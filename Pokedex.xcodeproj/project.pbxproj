@@ -26,6 +26,8 @@
 		FCDF498126715DF50023CA49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDF498026715DF50023CA49 /* SceneDelegate.swift */; };
 		FCDF498826715DF70023CA49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCDF498726715DF70023CA49 /* Assets.xcassets */; };
 		FCDF498B26715DF70023CA49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCDF498926715DF70023CA49 /* LaunchScreen.storyboard */; };
+		FCF85A7E26779FAD0076B5A7 /* NSMutableAttributedString+BoldTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF85A7D26779FAD0076B5A7 /* NSMutableAttributedString+BoldTitle.swift */; };
+		FCF85A802677A2510076B5A7 /* UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF85A7F2677A2510076B5A7 /* UISetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		FCDF498726715DF70023CA49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCDF498A26715DF70023CA49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCDF498C26715DF70023CA49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCF85A7D26779FAD0076B5A7 /* NSMutableAttributedString+BoldTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+BoldTitle.swift"; sourceTree = "<group>"; };
+		FCF85A7F2677A2510076B5A7 /* UISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISetup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				FCBBCDF926739A9A006847E2 /* UIColor+commonColors.swift */,
+				FCF85A7D26779FAD0076B5A7 /* NSMutableAttributedString+BoldTitle.swift */,
+				FCF85A7F2677A2510076B5A7 /* UISetup.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -306,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCD4134F267281FD00FE4B6B /* ProfileController.swift in Sources */,
+				FCF85A7E26779FAD0076B5A7 /* NSMutableAttributedString+BoldTitle.swift in Sources */,
 				FC8AD9952675499C006C03D0 /* APIService.swift in Sources */,
 				FC23251B2673D14000F74CDD /* SearchBoxView.swift in Sources */,
 				FCD4134B267281DF00FE4B6B /* PokedexController.swift in Sources */,
@@ -314,6 +321,7 @@
 				FCD4134D267281F800FE4B6B /* CardsController.swift in Sources */,
 				FC23251D2673DE9400F74CDD /* Pokemon.swift in Sources */,
 				FCD413492672801600FE4B6B /* MainTabController.swift in Sources */,
+				FCF85A802677A2510076B5A7 /* UISetup.swift in Sources */,
 				FC2325212673E6D500F74CDD /* PokedexService.swift in Sources */,
 				FC23251F2673E3BE00F74CDD /* PokedexViewModel.swift in Sources */,
 				FC232523267413BC00F74CDD /* Type.swift in Sources */,
